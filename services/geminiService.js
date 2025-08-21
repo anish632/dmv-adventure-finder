@@ -43,7 +43,7 @@ async function getAISuggestions(location, time, budget) {
   const prompt = `
     I'm looking for creative and unique things to do. Please give me 2-3 innovative suggestions based on these criteria:
     - Location: ${location}
-    - Time of Day: ${time}
+    - Duration/Time Available: ${time}
     - Budget: ${budget}
 
     Focus on creative, non-cliche ideas that go beyond typical tourist activities. For example:
@@ -610,13 +610,13 @@ function getMuseumSuggestions(location, budget) {
 function getCreativeFallbackSuggestions(location, time, budget) {
   const creativeData = {
     "Washington D.C.": {
-      "Morning": {
+      "1-2 hours": {
         "Free": [
           {
-            "name": "Monument Shadow Photography Challenge",
-            "description": "Capture the changing shadows of monuments throughout the morning. Start at sunrise and photograph how shadows transform the National Mall. Create a time-lapse story using only shadow images.",
+            "name": "Single Monument Visit",
+            "description": "Visit one iconic monument like the Lincoln Memorial or Washington Monument. Take photos, read the inscriptions, and learn about its history.",
             "estimated_cost": "Free",
-            "location_hint": "National Mall, Lincoln Memorial to Washington Monument"
+            "location_hint": "National Mall monuments"
           },
           {
             "name": "Rock Creek Park Nature Trail",
@@ -637,10 +637,10 @@ function getCreativeFallbackSuggestions(location, time, budget) {
             "location_hint": "Capitol Hill neighborhood, Eastern Market area"
           },
           {
-            "name": "Smithsonian Museum Art Interpretation",
-            "description": "Visit the National Gallery of Art and create your own interpretations of artworks. Write short stories, poems, or create sketches inspired by what you see.",
+            "name": "Single Smithsonian Museum Visit",
+            "description": "Visit one Smithsonian museum and focus on a specific exhibit or collection. Perfect for a quick cultural experience.",
             "estimated_cost": "Free",
-            "location_hint": "National Gallery of Art, 6th St and Constitution Ave NW"
+            "location_hint": "Any Smithsonian museum on the National Mall"
           }
         ],
         "Cheap ($)": [
@@ -686,7 +686,7 @@ function getCreativeFallbackSuggestions(location, time, budget) {
           }
         ]
       },
-      "Afternoon": {
+      "Half Day (3-4 hours)": {
         "Free": [
           {
             "name": "Potomac Riverfront Walk",
@@ -750,13 +750,13 @@ function getCreativeFallbackSuggestions(location, time, budget) {
           }
         ]
       },
-      "Evening": {
+      "Full Day (6+ hours)": {
         "Free": [
           {
-            "name": "Kennedy Center Millennium Stage",
-            "description": "Enjoy free performances at the Kennedy Center's Millennium Stage. Every evening at 6 PM, they host free concerts, dance performances, and cultural events.",
+            "name": "Smithsonian Museum Marathon",
+            "description": "Visit multiple Smithsonian museums in one day and create a 'Museum Marathon' blog. Document your journey through art, history, and science.",
             "estimated_cost": "Free",
-            "location_hint": "John F. Kennedy Center for the Performing Arts"
+            "location_hint": "Various Smithsonian museums on the National Mall"
           },
           {
             "name": "Monument Night Photography",
@@ -796,13 +796,13 @@ function getCreativeFallbackSuggestions(location, time, budget) {
           }
         ]
       },
-      "All Day": {
+      "Quick Visit (30 minutes - 1 hour)": {
         "Free": [
           {
-            "name": "DC Neighborhood Character Study",
-            "description": "Spend the day in different neighborhoods documenting their unique character. Create a 'DC Neighborhood Guide' with photos, stories, and observations.",
+            "name": "Kennedy Center Millennium Stage",
+            "description": "Enjoy free performances at the Kennedy Center's Millennium Stage. Every evening at 6 PM, they host free concerts, dance performances, and cultural events.",
             "estimated_cost": "Free",
-            "location_hint": "Various DC neighborhoods"
+            "location_hint": "John F. Kennedy Center for the Performing Arts"
           },
           {
             "name": "Seasonal Change Documentation",
@@ -844,7 +844,7 @@ function getCreativeFallbackSuggestions(location, time, budget) {
       }
     },
     "Maryland": {
-      "Morning": {
+      "1-2 hours": {
         "Free": [
           {
             "name": "Chesapeake Bay Sunrise Meditation",
@@ -880,10 +880,10 @@ function getCreativeFallbackSuggestions(location, time, budget) {
           }
         ]
       },
-      "Afternoon": {
-        "Free": [
-          {
-            "name": "Civil War Battlefield Reenactment Photography",
+              "Half Day (3-4 hours)": {
+          "Free": [
+            {
+              "name": "Civil War Battlefield Reenactment Photography",
             "description": "Visit Antietam and create artistic photographs that tell the story of the battle through modern eyes.",
             "estimated_cost": "Free",
             "location_hint": "Antietam National Battlefield"
@@ -906,7 +906,7 @@ function getCreativeFallbackSuggestions(location, time, budget) {
       }
     },
     "Virginia": {
-      "Morning": {
+      "1-2 hours": {
         "Free": [
           {
             "name": "Mount Vernon Estate & Gardens",
@@ -942,7 +942,7 @@ function getCreativeFallbackSuggestions(location, time, budget) {
           }
         ]
       },
-      "Afternoon": {
+      "Half Day (3-4 hours)": {
         "Free": [
           {
             "name": "Old Town Alexandria Historic Walk",
