@@ -1,0 +1,5 @@
+{
+  "name": "DMV Adventure Finder",
+  "description": "An application that suggests creative things to do in the Washington D.C., Maryland, and Virginia (DMV) area based on your location, time, and budget preferences. It uses AI to generate unique and fun activity ideas.",
+  "requestFramePermissions": []
+}
