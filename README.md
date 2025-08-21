@@ -24,7 +24,7 @@ A web application that helps users discover fun activities in the DC, Maryland, 
 
 1. **Clone the repository**
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/anish632/dmv-adventure-finder.git
    cd dmv-adventure-finder
    ```
 
@@ -36,6 +36,8 @@ A web application that helps users discover fun activities in the DC, Maryland, 
 3. **Install Python dependencies**
    ```bash
    pip install -r requirements.txt
+   # or use the setup script
+   python setup.py
    ```
 
 4. **Set up environment variables**
@@ -75,6 +77,40 @@ npm run build
 npm run preview
 ```
 
+## Deployment
+
+### Frontend Deployment (Vercel)
+
+1. **Connect to Vercel**
+   - Install Vercel CLI: `npm i -g vercel`
+   - Run: `vercel`
+
+2. **Automatic Deployment**
+   - Push to main branch triggers automatic deployment
+   - Vercel will use the `vercel.json` configuration
+
+### Backend Deployment (Render)
+
+1. **Deploy to Render**
+   - Connect your GitHub repository to Render
+   - Create a new Web Service
+   - Use the `render.yaml` configuration
+   - Set environment variable: `GEMINI_API_KEY`
+
+2. **Alternative: Railway**
+   - Connect repository to Railway
+   - Set environment variables
+   - Deploy automatically
+
+### Alternative: Heroku
+
+1. **Deploy to Heroku**
+   ```bash
+   heroku create your-app-name
+   heroku config:set GEMINI_API_KEY=your_key
+   git push heroku main
+   ```
+
 ## API Endpoints
 
 - `POST /api/suggestions` - Get activity suggestions based on location, time, and budget
@@ -91,6 +127,20 @@ npm run preview
 ## Technologies Used
 
 - **Frontend**: React, Vite, Tailwind CSS
-- **Backend**: Flask, Flask-CORS
+- **Backend**: Flask, Flask-CORS, Gunicorn
 - **AI**: Google Generative AI (Gemini)
 - **Development**: Concurrently for running multiple processes
+- **Deployment**: Vercel (Frontend), Render/Railway (Backend)
+
+## CI/CD
+
+GitHub Actions automatically:
+- Tests frontend build
+- Validates Python dependencies
+- Runs code linting
+- Prepares for deployment
+
+## Live Demo
+
+- **Frontend**: [Vercel Deployment](https://dmv-adventure-finder.vercel.app)
+- **Backend**: [Render Deployment](https://dmv-adventure-finder-backend.onrender.com)
