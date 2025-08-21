@@ -53,7 +53,7 @@ test_backend() {
     # Check if Python dependencies are installed
     if ! python -c "import flask, google.generativeai" 2>/dev/null; then
         print_warning "Python dependencies not found. Installing..."
-        pip install -r requirements.txt
+        python -m pip install -r requirements.txt
     fi
     
     # Test if the app can be imported
