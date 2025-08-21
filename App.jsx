@@ -101,7 +101,7 @@ const App = () => {
 
         <section className="bg-white dark:bg-gray-800/50 p-6 sm:p-8 rounded-2xl shadow-md border border-gray-200 dark:border-gray-700">
           <OptionSelector title="Choose a Location" options={LOCATION_OPTIONS} selectedValue={location} onSelect={setLocation} Icon={<LocationIcon/>} />
-          <OptionSelector title="Select Time of Day" options={TIME_OPTIONS} selectedValue={time} onSelect={setTime} Icon={<TimeIcon/>} />
+          <OptionSelector title="How Much Time Do You Have?" options={TIME_OPTIONS} selectedValue={time} onSelect={setTime} Icon={<TimeIcon/>} />
           <OptionSelector title="Set Your Budget" options={BUDGET_OPTIONS} selectedValue={budget} onSelect={setBudget} Icon={<BudgetIcon/>} />
           
           <div className="text-center mt-8">
