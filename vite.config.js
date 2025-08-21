@@ -6,8 +6,7 @@ export default defineConfig(({ mode }) => {
     return {
       base: process.env.NODE_ENV === 'production' ? '/dmv-adventure-finder/' : '/',
       define: {
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GOOGLE_PLACES_API_KEY': JSON.stringify(env.GOOGLE_PLACES_API_KEY)
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
       },
       resolve: {
         alias: {
