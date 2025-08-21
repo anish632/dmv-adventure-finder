@@ -3,25 +3,33 @@ import config from '../config.js';
 // Enhanced service that provides creative activity suggestions
 export async function getSuggestions(location, time, budget) {
   try {
+    // Get museum suggestions first
+    const museumSuggestions = getMuseumSuggestions(location, budget);
+    
     // Get creative fallback suggestions
-    const fallbackSuggestions = getCreativeFallbackSuggestions(location, time, budget);
+    const creativeSuggestions = getCreativeFallbackSuggestions(location, time, budget);
+    
+    // Combine museum and creative suggestions
+    const combinedSuggestions = [...museumSuggestions, ...creativeSuggestions];
     
     // If we have AI API, enhance with AI suggestions
     if (config.GEMINI_API_KEY) {
       try {
         const aiSuggestions = await getAISuggestions(location, time, budget);
-        // Combine fallback with AI suggestions
-        return combineSuggestions(fallbackSuggestions, aiSuggestions);
+        // Combine all suggestions
+        return combineSuggestions(combinedSuggestions, aiSuggestions);
       } catch (error) {
-        console.log('AI suggestions failed, using creative fallback data');
-        return fallbackSuggestions;
+        console.log('AI suggestions failed, using museum and creative fallback data');
+        return combinedSuggestions.slice(0, 6);
       }
     }
     
-    return fallbackSuggestions;
+    return combinedSuggestions.slice(0, 6);
   } catch (error) {
     console.error("Error fetching suggestions:", error);
-    return getCreativeFallbackSuggestions(location, time, budget);
+    const museumSuggestions = getMuseumSuggestions(location, budget);
+    const creativeSuggestions = getCreativeFallbackSuggestions(location, time, budget);
+    return [...museumSuggestions, ...creativeSuggestions].slice(0, 6);
   }
 }
 
@@ -367,6 +375,42 @@ const museumData = {
     ]
   }
 };
+
+// Get museum suggestions based on location and budget
+function getMuseumSuggestions(location, budget) {
+  const museums = museumData[location];
+  if (!museums) return [];
+  
+  const suggestions = [];
+  
+  // Add free museums
+  if (museums.Free) {
+    for (const museum of museums.Free.slice(0, 3)) {
+      suggestions.push({
+        name: museum.name,
+        description: `${museum.description}. Highlights include: ${museum.highlights.join(', ')}.`,
+        estimated_cost: "Free",
+        location_hint: museum.location
+      });
+    }
+  }
+  
+  // Add paid museums based on budget
+  if (museums.Paid && budget !== "Free") {
+    for (const museum of museums.Paid.slice(0, 2)) {
+      if (museum.cost !== "Closed") {
+        suggestions.push({
+          name: museum.name,
+          description: `${museum.description}. Highlights include: ${museum.highlights.join(', ')}.`,
+          estimated_cost: museum.cost,
+          location_hint: museum.location
+        });
+      }
+    }
+  }
+  
+  return suggestions;
+}
 
 // Creative fallback suggestions with unique activities
 function getCreativeFallbackSuggestions(location, time, budget) {
