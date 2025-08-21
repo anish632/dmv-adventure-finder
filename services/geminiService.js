@@ -619,26 +619,26 @@ function getCreativeFallbackSuggestions(location, time, budget) {
             "location_hint": "National Mall, Lincoln Memorial to Washington Monument"
           },
           {
-            "name": "DC Street Art Scavenger Hunt",
-            "description": "Create your own street art scavenger hunt. Look for murals, graffiti, and public art installations throughout the city. Document each find with creative photos and create a digital art gallery.",
+            "name": "Rock Creek Park Nature Trail",
+            "description": "Explore the largest urban park in the country with 32 miles of trails. Perfect for bird watching, photography, or enjoying nature before the city wakes up.",
             "estimated_cost": "Free",
-            "location_hint": "Various neighborhoods - U Street, Adams Morgan, Capitol Hill"
+            "location_hint": "Rock Creek Park, various trailheads"
           },
           {
-            "name": "Urban Bird Symphony Recording",
-            "description": "Record the morning bird songs in different DC neighborhoods. Compare the sounds of Rock Creek Park vs. urban areas. Create a 'DC Morning Symphony' audio collage.",
+            "name": "Tidal Basin Cherry Blossom Walk",
+            "description": "Take a contemplative morning walk around the Tidal Basin. The 2.1-mile loop offers stunning views of the Jefferson Memorial and Washington Monument.",
             "estimated_cost": "Free",
-            "location_hint": "Rock Creek Park, Georgetown, National Mall"
+            "location_hint": "Tidal Basin, near Jefferson Memorial"
           },
           {
-            "name": "Reflection Photography Journey",
-            "description": "Photograph monuments and buildings using only their reflections in water, windows, and other reflective surfaces. Create a 'DC Through Reflections' photo series.",
+            "name": "Capitol Hill Architecture Tour",
+            "description": "Explore the historic Capitol Hill neighborhood in the morning light. Admire beautiful row houses, visit Eastern Market, and learn about the area's rich history.",
             "estimated_cost": "Free",
-            "location_hint": "Tidal Basin, Lincoln Memorial Reflecting Pool, building windows"
+            "location_hint": "Capitol Hill neighborhood, Eastern Market area"
           },
           {
             "name": "Smithsonian Museum Art Interpretation",
-            "description": "Visit the National Gallery of Art and create your own interpretations of artworks. Write short stories, poems, or create sketches inspired by what you see. Share your creative responses.",
+            "description": "Visit the National Gallery of Art and create your own interpretations of artworks. Write short stories, poems, or create sketches inspired by what you see.",
             "estimated_cost": "Free",
             "location_hint": "National Gallery of Art, 6th St and Constitution Ave NW"
           }
@@ -689,28 +689,28 @@ function getCreativeFallbackSuggestions(location, time, budget) {
       "Afternoon": {
         "Free": [
           {
-            "name": "Museum Art Interpretation Challenge",
-            "description": "Visit a museum and create your own interpretations of artworks. Write short stories, poems, or create sketches inspired by what you see. Share your creative responses.",
+            "name": "Potomac Riverfront Walk",
+            "description": "Stroll along the Potomac and Anacostia rivers on the waterfront boardwalks. Enjoy views of the water, boats, and city skyline while watching for wildlife.",
             "estimated_cost": "Free",
-            "location_hint": "National Gallery of Art, Smithsonian museums"
+            "location_hint": "The Wharf, Georgetown Waterfront, East Potomac Park"
           },
           {
-            "name": "DC Architecture Style Hunt",
-            "description": "Photograph buildings representing different architectural styles (Neoclassical, Art Deco, Modern). Create a 'DC Architecture Timeline' collage.",
-            "estimated_cost": "Free",
-            "location_hint": "Downtown DC, Georgetown, Capitol Hill"
+            "name": "Georgetown Shopping & Architecture",
+            "description": "Explore Georgetown's historic cobblestone streets, browse unique boutiques, and admire Federal-style architecture. Visit the historic C&O Canal.",
+            "estimated_cost": "Free (browsing)",
+            "location_hint": "Georgetown, M Street and Wisconsin Avenue"
           },
           {
-            "name": "Urban Nature Journaling",
-            "description": "Create a nature journal documenting urban wildlife, plants, and natural elements in the city. Sketch, write, and photograph your discoveries.",
+            "name": "National Arboretum Exploration",
+            "description": "Discover 446 acres of gardens, collections, and research facilities. See the famous Capitol Columns and seasonal displays.",
             "estimated_cost": "Free",
-            "location_hint": "Rock Creek Park, National Arboretum, city parks"
+            "location_hint": "National Arboretum, 3501 New York Ave NE"
           },
           {
-            "name": "Sound Map Creation",
-            "description": "Walk through different neighborhoods and create a 'sound map' of DC. Record and document the unique sounds of each area.",
+            "name": "Dupont Circle Fountain & Neighborhood",
+            "description": "Visit the iconic Dupont Circle fountain and explore the vibrant neighborhood known for its galleries, bookstores, and historic architecture.",
             "estimated_cost": "Free",
-            "location_hint": "Various DC neighborhoods"
+            "location_hint": "Dupont Circle, Connecticut Avenue NW"
           },
           {
             "name": "Smithsonian Scavenger Hunt",
@@ -753,22 +753,22 @@ function getCreativeFallbackSuggestions(location, time, budget) {
       "Evening": {
         "Free": [
           {
-            "name": "Night Light Painting",
-            "description": "Use long exposure photography to 'paint' with light around the monuments at night. Create abstract light art using the city as your canvas.",
+            "name": "Kennedy Center Millennium Stage",
+            "description": "Enjoy free performances at the Kennedy Center's Millennium Stage. Every evening at 6 PM, they host free concerts, dance performances, and cultural events.",
+            "estimated_cost": "Free",
+            "location_hint": "John F. Kennedy Center for the Performing Arts"
+          },
+          {
+            "name": "Monument Night Photography",
+            "description": "Capture the monuments in a different light with evening photography. The Lincoln Memorial, Jefferson Memorial, and Washington Monument are especially beautiful when lit up.",
             "estimated_cost": "Free",
             "location_hint": "National Mall monuments"
           },
           {
-            "name": "Urban Astronomy Session",
-            "description": "Find the best spots in DC for stargazing despite light pollution. Document constellations visible from different locations in the city.",
-            "estimated_cost": "Free",
-            "location_hint": "Rock Creek Park, rooftop locations"
-          },
-          {
-            "name": "Jazz History Audio Tour",
-            "description": "Create your own audio tour of DC's jazz history. Record ambient sounds and music while walking past historic jazz venues.",
-            "estimated_cost": "Free",
-            "location_hint": "U Street, Shaw neighborhood"
+            "name": "The Wharf Waterfront Evening",
+            "description": "Experience DC's newest waterfront development with restaurants, music venues, and beautiful Potomac River views. Street performers and events happen regularly.",
+            "estimated_cost": "Free (entertainment)",
+            "location_hint": "The Wharf, Southwest Waterfront"
           }
         ],
         "Cheap ($)": [
@@ -853,16 +853,22 @@ function getCreativeFallbackSuggestions(location, time, budget) {
             "location_hint": "Various Chesapeake Bay locations"
           },
           {
-            "name": "Historic Annapolis Time Travel",
-            "description": "Walk through Annapolis imagining yourself in different historical periods. Create a 'Time Travel Diary' of your journey.",
+            "name": "Historic Annapolis Walking Tour",
+            "description": "Explore America's sailing capital with cobblestone streets, colonial architecture, and the US Naval Academy. Visit the Maryland State House and City Dock.",
             "estimated_cost": "Free",
-            "location_hint": "Historic Annapolis"
+            "location_hint": "Historic Annapolis, State Circle and Market Space"
           },
           {
-            "name": "Baltimore Museum Art Discovery",
-            "description": "Visit the Baltimore Museum of Art and focus on one artist or style. Create your own art piece inspired by what you see.",
+            "name": "Baltimore Inner Harbor Promenade",
+            "description": "Walk the famous Inner Harbor waterfront, see historic ships, and enjoy views of the Patapsco River. Visit the Maryland Science Center area.",
             "estimated_cost": "Free",
-            "location_hint": "Baltimore Museum of Art, 10 Art Museum Dr"
+            "location_hint": "Baltimore Inner Harbor, Pratt Street"
+          },
+          {
+            "name": "Sandy Point State Park Beach",
+            "description": "Experience Maryland's beautiful Chesapeake Bay coastline with sandy beaches, fishing, and views of the Bay Bridge.",
+            "estimated_cost": "Free",
+            "location_hint": "Sandy Point State Park, near Annapolis"
           }
         ],
         "Cheap ($)": [
@@ -903,22 +909,28 @@ function getCreativeFallbackSuggestions(location, time, budget) {
       "Morning": {
         "Free": [
           {
-            "name": "Mount Vernon Trail Poetry Walk",
-            "description": "Walk the Mount Vernon Trail and write poetry inspired by the Potomac River and historical sites along the way.",
-            "estimated_cost": "Free",
-            "location_hint": "Mount Vernon Trail"
+            "name": "Mount Vernon Estate & Gardens",
+            "description": "Visit George Washington's historic plantation home and explore the mansion, gardens, and outbuildings. Learn about America's first president.",
+            "estimated_cost": "Free (grounds), $25 for mansion tour",
+            "location_hint": "Mount Vernon Estate, Mount Vernon, VA"
           },
           {
-            "name": "Arlington Cemetery Story Collection",
-            "description": "Visit Arlington Cemetery and collect stories about the people buried there. Create a 'Voices of Arlington' collection.",
+            "name": "Arlington National Cemetery",
+            "description": "Pay respects at this solemn national cemetery. Watch the Changing of the Guard at the Tomb of the Unknown Soldier.",
             "estimated_cost": "Free",
             "location_hint": "Arlington National Cemetery"
           },
           {
-            "name": "Virginia Museum of Fine Arts Focus",
-            "description": "Visit the VMFA and choose one collection to study deeply. Create art inspired by your chosen theme.",
+            "name": "Virginia Beach Oceanfront",
+            "description": "Experience Virginia's famous beach resort city with a 3-mile boardwalk, sandy beaches, and Atlantic Ocean views.",
             "estimated_cost": "Free",
-            "location_hint": "Virginia Museum of Fine Arts, Richmond"
+            "location_hint": "Virginia Beach Boardwalk and Beach"
+          },
+          {
+            "name": "Shenandoah National Park",
+            "description": "Explore 200,000 acres of protected lands with waterfalls, wildlife, and scenic Skyline Drive. Perfect for hiking and nature photography.",
+            "estimated_cost": "Free",
+            "location_hint": "Shenandoah National Park, Northern Virginia"
           }
         ],
         "Cheap ($)": [
@@ -933,16 +945,28 @@ function getCreativeFallbackSuggestions(location, time, budget) {
       "Afternoon": {
         "Free": [
           {
-            "name": "Virginia Wine Country Photography",
-            "description": "Visit Virginia wineries and create artistic photographs of the vineyards and wine-making process.",
+            "name": "Old Town Alexandria Historic Walk",
+            "description": "Stroll through cobblestone streets in this charming colonial seaport. Visit the Torpedo Factory Art Center and walk along the Potomac River waterfront.",
             "estimated_cost": "Free",
-            "location_hint": "Virginia wine country"
+            "location_hint": "Old Town Alexandria, King Street and waterfront"
           },
           {
-            "name": "Richmond Street Art Tour",
-            "description": "Explore Richmond's vibrant street art scene. Create a map of murals and document the city's artistic expression.",
+            "name": "Virginia Wine Country Tour",
+            "description": "Explore Virginia's scenic wine regions in Loudoun County. Many wineries offer free tastings and beautiful mountain views.",
+            "estimated_cost": "Free (some wineries), $10-25 for tastings",
+            "location_hint": "Loudoun County wine country"
+          },
+          {
+            "name": "Richmond's Monument Avenue",
+            "description": "Walk or bike along historic Monument Avenue to see impressive statues and beautiful Victorian mansions in one of America's most beautiful boulevards.",
             "estimated_cost": "Free",
-            "location_hint": "Various neighborhoods in Richmond"
+            "location_hint": "Monument Avenue, Richmond"
+          },
+          {
+            "name": "Norfolk Botanical Garden",
+            "description": "Explore 175 acres of themed gardens with over 60 different garden areas. Beautiful year-round with seasonal displays.",
+            "estimated_cost": "Free",
+            "location_hint": "Norfolk Botanical Garden, Norfolk"
           }
         ],
         "Moderate ($$)": [
