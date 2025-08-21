@@ -159,7 +159,7 @@ const museumData = {
         "highlights": ["Chinese Art", "Japanese Art", "Whistler's Peacock Room"]
       },
       {
-        "name": "Smithsonian Sackler Gallery",
+        "name": "Arthur M. Sackler Gallery",
         "description": "Asian art and archaeology",
         "location": "1050 Independence Ave SW",
         "highlights": ["Ancient Chinese Art", "Islamic Art", "Contemporary Asian Art"]
@@ -171,7 +171,7 @@ const museumData = {
         "highlights": ["Native American Art", "Cultural Programs", "Native Foods Café"]
       },
       {
-        "name": "Smithsonian National Postal Museum",
+        "name": "National Postal Museum",
         "description": "Postal history and stamp collecting",
         "location": "2 Massachusetts Ave NE",
         "highlights": ["Stamp Collections", "Postal History", "Interactive Exhibits"]
@@ -183,10 +183,16 @@ const museumData = {
         "highlights": ["Traditional African Art", "Contemporary African Art", "Cultural Programs"]
       },
       {
-        "name": "Smithsonian Anacostia Community Museum",
+        "name": "Anacostia Community Museum",
         "description": "Local history and culture of the Anacostia community",
         "location": "1901 Fort Place SE",
         "highlights": ["Local History", "Community Programs", "Cultural Exhibits"]
+      },
+      {
+        "name": "Renwick Gallery",
+        "description": "Contemporary American craft and decorative arts",
+        "location": "1661 Pennsylvania Ave NW",
+        "highlights": ["American Craft", "Contemporary Art", "Decorative Arts"]
       },
       {
         "name": "Library of Congress",
@@ -211,6 +217,96 @@ const museumData = {
         "description": "Outdoor sculpture collection and ice skating in winter",
         "location": "7th St and Constitution Ave NW",
         "highlights": ["Outdoor Sculptures", "Ice Skating", "Fountain"]
+      },
+      {
+        "name": "Folger Shakespeare Library",
+        "description": "Shakespeare and Renaissance literature and art",
+        "location": "201 E Capitol St SE",
+        "highlights": ["Shakespeare Collection", "Renaissance Art", "Historic Theater"]
+      },
+      {
+        "name": "National Museum of Women in the Arts",
+        "description": "Art by women from the Renaissance to contemporary",
+        "location": "1250 New York Ave NW",
+        "highlights": ["Women Artists", "Historical Art", "Contemporary Exhibitions"]
+      },
+      {
+        "name": "DAR Museum",
+        "description": "American decorative arts from colonial to modern times",
+        "location": "1776 D St NW",
+        "highlights": ["Period Rooms", "Decorative Arts", "American History"]
+      },
+      {
+        "name": "African American Civil War Memorial Museum",
+        "description": "African American contributions during the Civil War",
+        "location": "1925 Vermont Ave NW",
+        "highlights": ["Civil War History", "African American Heroes", "Interactive Exhibits"]
+      },
+      {
+        "name": "National Museum of the US Navy",
+        "description": "US Navy history and naval heritage",
+        "location": "Washington Navy Yard",
+        "highlights": ["Naval History", "Ship Models", "Military Artifacts"]
+      },
+      {
+        "name": "Old Stone House",
+        "description": "Georgetown's oldest unchanged building from 1765",
+        "location": "3051 M St NW",
+        "highlights": ["Colonial Architecture", "Historic Rooms", "Garden"]
+      },
+      {
+        "name": "Mary McLeod Bethune Council House National Historic Site",
+        "description": "Home and headquarters of civil rights leader Mary McLeod Bethune",
+        "location": "1318 Vermont Ave NW",
+        "highlights": ["Civil Rights History", "Women's History", "Educational Programs"]
+      },
+      {
+        "name": "Frederick Douglass National Historic Site",
+        "description": "Home of abolitionist and orator Frederick Douglass",
+        "location": "1411 W St SE",
+        "highlights": ["Abolitionist History", "Historic Home", "Personal Artifacts"]
+      },
+      {
+        "name": "Ford's Theatre",
+        "description": "Historic theater where Lincoln was assassinated",
+        "location": "511 10th St NW",
+        "highlights": ["Lincoln Assassination", "Historic Theater", "Presidential Box"]
+      },
+      {
+        "name": "President Lincoln's Cottage",
+        "description": "Lincoln's seasonal retreat where he wrote the Emancipation Proclamation",
+        "location": "140 Rock Creek Church Rd NW",
+        "highlights": ["Lincoln History", "Emancipation Proclamation", "Historic Cottage"]
+      },
+      {
+        "name": "Belmont-Paul Women's Equality National Monument",
+        "description": "Historic headquarters of the National Woman's Party",
+        "location": "144 Constitution Ave NE",
+        "highlights": ["Women's Suffrage", "Equal Rights", "Feminist History"]
+      },
+      {
+        "name": "Washington Monument",
+        "description": "Iconic obelisk honoring George Washington",
+        "location": "2 15th St NW",
+        "highlights": ["City Views", "Washington Memorial", "Historic Landmark"]
+      },
+      {
+        "name": "Lincoln Memorial",
+        "description": "Memorial to Abraham Lincoln with famous statue",
+        "location": "2 Lincoln Memorial Cir NW",
+        "highlights": ["Lincoln Statue", "Reflecting Pool", "Historic Speeches"]
+      },
+      {
+        "name": "United States Capitol",
+        "description": "Historic seat of the US Congress with tours available",
+        "location": "East Capitol St NE & First St SE",
+        "highlights": ["Capitol Dome", "Rotunda", "Statuary Hall"]
+      },
+      {
+        "name": "White House",
+        "description": "Official residence and workplace of the US President",
+        "location": "1600 Pennsylvania Ave NW",
+        "highlights": ["Presidential History", "State Rooms", "Rose Garden"]
       }
     ],
     "Paid": [
@@ -220,13 +316,6 @@ const museumData = {
         "location": "700 L'Enfant Plaza SW",
         "cost": "$26.95 adults, $16.95 children",
         "highlights": ["Spy School", "Interactive Missions", "Historic Artifacts"]
-      },
-      {
-        "name": "Newseum",
-        "description": "News and journalism history (Note: Now closed, but worth mentioning for historical context)",
-        "location": "Formerly at 555 Pennsylvania Ave NW",
-        "cost": "Closed",
-        "highlights": ["Journalism History", "First Amendment", "Interactive Exhibits"]
       },
       {
         "name": "National Building Museum",
@@ -243,18 +332,123 @@ const museumData = {
         "highlights": ["Photography Exhibits", "Exploration History", "Interactive Displays"]
       },
       {
-        "name": "Phillips Collection",
+        "name": "The Phillips Collection",
         "description": "Modern art in a historic mansion setting",
         "location": "1600 21st St NW",
         "cost": "$16 adults, free for children",
         "highlights": ["Impressionist Art", "Modern Masters", "Intimate Setting"]
       },
       {
-        "name": "Corcoran Gallery of Art",
-        "description": "American art and contemporary exhibitions",
-        "location": "500 17th St NW",
-        "cost": "$10 adults, free for children",
-        "highlights": ["American Art", "Contemporary Exhibitions", "Historic Building"]
+        "name": "Museum of the Bible",
+        "description": "History and impact of the Bible",
+        "location": "400 4th St SW",
+        "cost": "$25 adults, $15 children",
+        "highlights": ["Biblical Artifacts", "Interactive Exhibits", "Immersive Experiences"]
+      },
+      {
+        "name": "Madame Tussauds",
+        "description": "Wax museum with lifelike figures of celebrities and historical figures",
+        "location": "1001 F St NW",
+        "cost": "$30+ adults, varies by season",
+        "highlights": ["Celebrity Wax Figures", "Presidential Gallery", "Interactive Exhibits"]
+      },
+      {
+        "name": "Hillwood Estate, Museum & Gardens",
+        "description": "Marjorie Merriweather Post's mansion with Russian and French decorative arts",
+        "location": "4155 Linnean Ave NW",
+        "cost": "$18 adults, $15 seniors/students",
+        "highlights": ["Russian Imperial Art", "French Decorative Arts", "Gardens"]
+      },
+      {
+        "name": "Dumbarton Oaks Research Library and Collection",
+        "description": "Byzantine and Pre-Columbian art and beautiful gardens",
+        "location": "1703 32nd St NW",
+        "cost": "$10 for gardens, museum varies",
+        "highlights": ["Byzantine Art", "Pre-Columbian Collection", "Historic Gardens"]
+      },
+      {
+        "name": "Tudor Place",
+        "description": "Historic Georgetown mansion and garden",
+        "location": "1644 31st St NW",
+        "cost": "$12 adults, $6 children",
+        "highlights": ["Federal Architecture", "Historic Gardens", "Martha Washington Artifacts"]
+      },
+      {
+        "name": "Kreeger Museum",
+        "description": "Modern and contemporary art in a unique architectural setting",
+        "location": "2401 Foxhall Rd NW",
+        "cost": "$10 adults, $7 seniors/students",
+        "highlights": ["Impressionist Art", "Contemporary Works", "Unique Architecture"]
+      },
+      {
+        "name": "Woodrow Wilson House",
+        "description": "Former home of the 28th President",
+        "location": "2340 S St NW",
+        "cost": "$10 adults, $8 seniors/students",
+        "highlights": ["Presidential History", "Period Furnishings", "Historic Home"]
+      },
+      {
+        "name": "Textile Museum",
+        "description": "Global textile arts and traditions",
+        "location": "2320 S St NW",
+        "cost": "$8 adults, $6 seniors/students",
+        "highlights": ["Global Textiles", "Historic Rugs", "Cultural Exhibitions"]
+      },
+      {
+        "name": "The Octagon House",
+        "description": "Historic Federal-style house and architecture museum",
+        "location": "1799 New York Ave NW",
+        "cost": "$10 adults, $5 students",
+        "highlights": ["Federal Architecture", "Historic Rooms", "Design History"]
+      },
+      {
+        "name": "Heurich House Museum",
+        "description": "Victorian mansion of beer baron Christian Heurich",
+        "location": "1307 New Hampshire Ave NW",
+        "cost": "$5-15 depending on tour",
+        "highlights": ["Victorian Architecture", "Brewing History", "Period Rooms"]
+      },
+      {
+        "name": "Decatur House",
+        "description": "Historic Federal-style house near the White House",
+        "location": "1610 H St NW",
+        "cost": "$10 adults, $5 children",
+        "highlights": ["Federal Period", "White House History", "Historic Furnishings"]
+      },
+      {
+        "name": "Dumbarton House",
+        "description": "Federal period house museum in Georgetown",
+        "location": "2715 Q St NW",
+        "cost": "$5 adults, free for children",
+        "highlights": ["Federal Architecture", "Georgetown History", "Period Rooms"]
+      },
+      {
+        "name": "O Street Museum",
+        "description": "Eclectic mansion with secret doors and unusual collections",
+        "location": "2020 O St NW",
+        "cost": "$25-40 depending on tour",
+        "highlights": ["Secret Passages", "Unusual Collections", "Mansion Tour"]
+      },
+      {
+        "name": "Larz Anderson House",
+        "description": "Gilded Age mansion and Society of the Cincinnati museum",
+        "location": "2118 Massachusetts Ave NW",
+        "cost": "$10 adults, $5 students",
+        "highlights": ["Gilded Age Architecture", "Revolutionary War History", "Elegant Interiors"]
+      },
+      {
+        "name": "National Museum of American Jewish Military History",
+        "description": "Jewish Americans' military service contributions",
+        "location": "1811 R St NW",
+        "cost": "Free admission, donations accepted",
+        "highlights": ["Military History", "Jewish American Heritage", "Veterans Stories"]
+      },
+      {
+        "name": "Lillian & Albert Small Jewish Museum",
+        "description": "Historic synagogue and Jewish heritage in DC",
+        "location": "701 3rd St NW",
+        "cost": "$8 adults, $5 students",
+        "highlights": ["Historic Synagogue", "Jewish Heritage", "Community History"]
       }
     ]
   },
