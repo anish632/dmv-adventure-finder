@@ -16,14 +16,38 @@
 4. **Save Configuration**
    - The GitHub Actions workflow will automatically build and deploy your site
 
+## Set up API Key (Required for AI Features)
+
+1. **Go to Repository Secrets**
+   - In Settings, click on "Secrets and variables" → "Actions"
+
+2. **Add New Repository Secret**
+   - Click "New repository secret"
+   - **Name**: `GEMINI_API_KEY`
+   - **Value**: Your Google Gemini API key
+   - Click "Add secret"
+
+3. **Get Your API Key**
+   - Go to [Google AI Studio](https://makersuite.google.com/app/apikey)
+   - Create a new API key
+   - Copy the key and paste it in the secret value
+
 ## What Happens Next
 
 1. **Automatic Deployment**: Every push to the `main` branch triggers a new deployment
 2. **Build Process**: The workflow will:
    - Install Node.js dependencies
+   - Include your API key securely in the build
    - Build the React app
    - Deploy to GitHub Pages
 3. **Live Site**: Your site will be available at `https://anish632.github.io/dmv-adventure-finder`
+
+## How It Works
+
+- **Single Application**: Everything runs in the browser
+- **Direct AI Integration**: Frontend directly calls Google Gemini AI
+- **No Backend**: Completely serverless architecture
+- **Fallback Mode**: Works even without API key using curated suggestions
 
 ## Troubleshooting
 
@@ -32,10 +56,11 @@
 2. Ensure the repository is public (GitHub Pages requires public repos for free accounts)
 3. Wait a few minutes for the first deployment to complete
 
-### If API calls fail:
-1. Make sure your backend is deployed and accessible
-2. Check the browser console for CORS errors
-3. Verify the backend URL in `services/geminiService.js`
+### If AI suggestions don't work:
+1. Check if you've added the `GEMINI_API_KEY` secret
+2. Verify the API key is valid and has credits
+3. Check the browser console for any errors
+4. The app will use fallback suggestions if the API fails
 
 ### If the build fails:
 1. Check the GitHub Actions logs
@@ -67,11 +92,21 @@ If you want to use a custom domain:
 ## Security
 
 - **HTTPS**: GitHub Pages automatically provides HTTPS
-- **CORS**: The backend needs to allow requests from your GitHub Pages domain
-- **API Keys**: Never expose API keys in the frontend code
+- **API Key**: Stored securely in GitHub Secrets, embedded in build
+- **No Server**: No backend to secure or maintain
+- **Client-Side**: All processing happens in the browser
 
 ## Cost
 
 - **GitHub Pages**: Free for public repositories
 - **Bandwidth**: 100GB per month included
 - **Build Time**: 2000 minutes per month included
+- **Gemini API**: Pay-per-use (very affordable, ~$0.001 per request)
+
+## Benefits of This Architecture
+
+1. **Simplified Deployment**: Single application, no backend to manage
+2. **Cost Effective**: Only pay for API usage, no server costs
+3. **Scalable**: Automatically scales with GitHub Pages
+4. **Reliable**: Built-in fallback mode ensures app always works
+5. **Secure**: API key stored securely, HTTPS by default
