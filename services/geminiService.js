@@ -577,9 +577,10 @@ function getMuseumSuggestions(location, budget) {
   
   const suggestions = [];
   
-  // Add free museums
+  // Shuffle and add free museums for variety
   if (museums.Free) {
-    for (const museum of museums.Free.slice(0, 3)) {
+    const shuffledFreeMuseums = [...museums.Free].sort(() => Math.random() - 0.5);
+    for (const museum of shuffledFreeMuseums.slice(0, 2)) {
       suggestions.push({
         name: museum.name,
         description: `${museum.description}. Highlights include: ${museum.highlights.join(', ')}.`,
@@ -591,7 +592,8 @@ function getMuseumSuggestions(location, budget) {
   
   // Add paid museums based on budget
   if (museums.Paid && budget !== "Free") {
-    for (const museum of museums.Paid.slice(0, 2)) {
+    const shuffledPaidMuseums = [...museums.Paid].sort(() => Math.random() - 0.5);
+    for (const museum of shuffledPaidMuseums.slice(0, 2)) {
       if (museum.cost !== "Closed") {
         suggestions.push({
           name: museum.name,
@@ -1009,6 +1011,36 @@ function getCreativeFallbackSuggestions(location, time, budget) {
   ];
 
   return suggestions;
+}
+
+// Get all available museums and attractions for a location
+export function getAllAttractionsForLocation(location) {
+  const museums = museumData[location];
+  if (!museums) return { free: [], paid: [] };
+  
+  return {
+    free: museums.Free || [],
+    paid: museums.Paid || [],
+    total: (museums.Free?.length || 0) + (museums.Paid?.length || 0)
+  };
+}
+
+// Get a summary of all available content
+export function getContentSummary() {
+  const summary = {};
+  
+  Object.keys(museumData).forEach(location => {
+    const attractions = getAllAttractionsForLocation(location);
+    summary[location] = {
+      freeCount: attractions.free.length,
+      paidCount: attractions.paid.length,
+      total: attractions.total,
+      freeAttractions: attractions.free.map(item => item.name),
+      paidAttractions: attractions.paid.map(item => item.name)
+    };
+  });
+  
+  return summary;
 }
 
 // Export museum data for potential use in other parts of the app
