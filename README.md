@@ -79,6 +79,13 @@ npm run preview
 
 ## Deployment
 
+### GitHub Pages (Frontend) - Automatic
+
+The frontend is automatically deployed to GitHub Pages on every push to the main branch.
+
+- **Live Demo**: [https://anish632.github.io/dmv-adventure-finder](https://anish632.github.io/dmv-adventure-finder)
+- **Backend API**: [https://dmv-adventure-finder-backend.onrender.com](https://dmv-adventure-finder-backend.onrender.com)
+
 ### Frontend Deployment (Vercel)
 
 1. **Connect to Vercel**
@@ -130,7 +137,7 @@ npm run preview
 - **Backend**: Flask, Flask-CORS, Gunicorn
 - **AI**: Google Generative AI (Gemini)
 - **Development**: Concurrently for running multiple processes
-- **Deployment**: Vercel (Frontend), Render/Railway (Backend)
+- **Deployment**: GitHub Pages (Frontend), Render/Railway (Backend)
 
 ## CI/CD
 
@@ -138,9 +145,10 @@ GitHub Actions automatically:
 - Tests frontend build
 - Validates Python dependencies
 - Runs code linting
+- Deploys to GitHub Pages
 - Prepares for deployment
 
 ## Live Demo
 
-- **Frontend**: [Vercel Deployment](https://dmv-adventure-finder.vercel.app)
+- **Frontend**: [GitHub Pages](https://anish632.github.io/dmv-adventure-finder)
 - **Backend**: [Render Deployment](https://dmv-adventure-finder-backend.onrender.com)
