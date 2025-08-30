@@ -41,11 +41,13 @@ A web application that helps users discover fun activities in the DC, Maryland, 
    npm install
    ```
 
-3. **Set up environment variables**
-   Create a `.env` file in the root directory:
+3. **Set up environment variables (OPTIONAL for local development)**
+   ⚠️ **SECURITY WARNING**: Never create `.env` files - use `.env.local` instead
    ```
+   # Create .env.local (NOT .env) if you need local development
    GEMINI_API_KEY=your_gemini_api_key_here
    ```
+   **RECOMMENDED**: Use the deployed GitHub Pages version for testing instead.
 
 ## Running the Application
 
